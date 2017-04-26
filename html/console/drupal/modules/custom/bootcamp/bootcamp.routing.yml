@@ -1,0 +1,11 @@
+
+bootcamp.bootcamp_form:
+  path: '/admin/config/bootcamp/bootcamp'
+  defaults:
+    _form: '\Drupal\bootcamp\Form\BootcampForm'
+    _title: 'BootcampForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

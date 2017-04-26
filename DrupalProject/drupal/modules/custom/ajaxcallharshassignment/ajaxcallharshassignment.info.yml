@@ -1,0 +1,7 @@
+name: HarshTaskAjax
+description: This is the description about the custom form with Ajax call.
+package: custom
+
+core: 8.x
+type: module
+

@@ -1,0 +1,7 @@
+ajax2assignment.form:
+  path: '/ajax2'
+  defaults:
+    _form: 'Drupal\ajax2assignment\Form\Ajax2Assignment'
+    _title: 'Ajax Custom Form'
+  requirements:
+    _permission: 'access cotent'

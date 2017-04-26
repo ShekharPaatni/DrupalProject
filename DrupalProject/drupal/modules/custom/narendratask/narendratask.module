@@ -1,0 +1,30 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+namespace Drupal\narendratask;
+use \Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\Core\Queue\QueueInterface;
+function narendratask_entity_insert(EntityInterface $entity){
+  if($entity->getEntityTypeId()!= 'node'){
+    return;
+  }
+  if($entity->isPublished()){
+    return;
+  }
+  /**
+   * @var QueueFactory $queue_factory
+   */
+  $queue_factory= \Drupal::service('queue');
+   /**
+    * @var QueueInterface $queue
+    */
+  $queue=$queue_factory->get('cron_node_publisher');
+  $item=new \stdClass();
+  $item->nid=$entity->id();
+  $queue->createitem($item);
+}

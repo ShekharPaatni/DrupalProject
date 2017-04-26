@@ -1,0 +1,9 @@
+name: bootcamp
+type: module
+description: This is the testing module
+core: 8.x
+package: Custom
+dependencies:
+  - drupal:migrate
+  - migrate_tools:migrate_tools
+  - migrate_plus:migrate_plus

@@ -1,0 +1,15 @@
+sushiltask.form:
+  path: '/contactinfo'
+  defaults:
+    _form: 'Drupal\sushiltask\Form\Customform'
+    _title: 'Custom Form'
+  requirements:
+    _permission: 'access content'
+    
+sushiltask.content:
+  path: '/contactshow'
+  defaults:
+    _controller: 'Drupal\sushiltask\Controller\DataRetrivals::retrival'
+    _title: 'Custom Form'
+  requirements:
+    _permission: 'access content'    

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: customize
+label: customize
+effects:
+  0ca84452-209c-4335-acbc-a5aa3e86ae44:
+    uuid: 0ca84452-209c-4335-acbc-a5aa3e86ae44
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      upscale: false

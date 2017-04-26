@@ -1,0 +1,7 @@
+onceagain.form:
+  path: '/contactus'
+  defaults:
+    _form: '\Drupal\onceagain\Form\Detail'  
+    _title: 'User Form'
+  requirements:
+    _permission: 'access content'    

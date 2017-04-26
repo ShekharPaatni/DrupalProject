@@ -1,0 +1,70 @@
+/* ---------- Color Module Styles ----------- */
+
+body {
+  color: #3b3b3b;
+  background: #336265;
+}
+#page,
+#main-wrapper,
+.region-primary-menu .menu-item a.is-active,
+.region-primary-menu .menu-item--active-trail a {
+  background: #ffffff;
+}
+.tabs ul.primary li a.is-active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.is-active a {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#header {
+  background-color: #7c8c96;
+  background-image: -webkit-linear-gradient(top, #86355d 0%, #7c8c96 100%);
+  background-image: linear-gradient(to bottom, #86355d 0%, #7c8c96 100%);
+}
+a,
+.link {
+  color: #082c43;
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #155379;
+}
+a:active,
+.link:active {
+  color: #287fb5;
+}
+.sidebar .block {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+.site-footer {
+  background: #336265;
+}
+.region-header,
+.region-header a,
+.region-header li a.is-active,
+.site-branding__text,
+.site-branding,
+.site-branding__text a,
+.site-branding a,
+.region-secondary-menu .menu-item a,
+.region-secondary-menu .menu-item a.is-active {
+  color: #fffeff;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}

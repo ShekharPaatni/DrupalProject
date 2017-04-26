@@ -1,0 +1,76 @@
+<div id="page-wrapper">
+   {% if page.header %}
+    <header id="header">
+    {{ page.header }}
+    </header>
+    {% endif %}
+    {% if page.header_left or page.header_right or page.header_center %}
+        <div class="sectionlayout">
+                <div class="headerpositionleft">
+            {{ page.header_left }}
+                </div>
+                <div class="headerpositioncenter">
+            {{ page.header_center }}
+                </div>
+                <div class="headerpositionright">
+            {{ page.header_right }}
+                    
+                </div>
+    {% endif %}
+    {% if page.breadcrumb or page.nav %}
+        <div  class="navbar">
+            <div class="bread">
+                {{ page.breadcrumb }}
+            </div>
+            <div class="nav">
+                {{ page.nav }}
+            </div>
+        </div>
+    {% endif %}
+    {% if page.content_top or page.sidebar_first %}
+        <div class="content_top_block">
+             <div class="content_top">
+                 {{ page.content_top }}
+             </div>
+             <div class="sidebar">
+                 {{ page.sidebar_first }}
+             </div>
+             
+        </div>
+    {% endif %}
+    {% if page.content %}
+       <div class="contents">
+           {{ page.content }}
+       </div>
+    {% endif %} 
+    {% if page.content_bottom or page.sidebar_second %}
+        <div class="contentblock">
+            <div class="content_top">
+                {{ page.content_bottom }}
+            </div>
+            <div class="sidebarsecond">
+                {{ page.sidebar_second }}
+            </div>
+        </div>    
+    {% endif %}   
+    <footer>
+    {% if page.footer %}
+        <div class="contents">
+            {{ page.footer }}
+        </div>
+    {% endif %}
+    {% if page.footer_left or page.footer_right or page.footer_middle %}
+        <div class="contentblock">
+            <div class="footer_left">
+                {{ page.footer_left }}
+            </div>
+            <div class="footer_middle">
+                {{ page.footer_middle }}
+            </div>
+            <div class="footer_right">
+                {{ page.footer_right }}
+            </div>    
+        </div>
+    {% endif %}    
+    </footer>
+</div>

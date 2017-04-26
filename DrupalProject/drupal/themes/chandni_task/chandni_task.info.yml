@@ -1,0 +1,27 @@
+name: Testing
+type: theme
+description: This is for the testing.
+libraries:
+  - chandni_task/global-styling
+
+base theme: false
+regions:
+    header: Header
+    header_left: Header-left
+    header_right: Header-right
+    header_center: Header-center
+    breadcrumb: Breadcrumb
+    nav: nav
+    content_top: Content Top
+    sidebar_first: Sidebar First
+    sidebar_second: Sidebar second
+    content: content
+    content_bottom: Content Bottom
+    footer: footer
+    footer_left: Footer Left
+    footer_right: Footer Right
+    footer_middle: Footer Middle
+    
+
+core: 8.x
+version: 8.2.7

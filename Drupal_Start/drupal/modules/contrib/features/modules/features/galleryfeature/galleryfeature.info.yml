@@ -1,0 +1,16 @@
+name: GalleryFeature
+description: 'This is a slider'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - field
+  - image
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+  - views
+  - views_slideshow
+version: 8.x-1.0

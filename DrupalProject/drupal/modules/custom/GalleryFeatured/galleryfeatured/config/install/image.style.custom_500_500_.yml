@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: custom_500_500_
+label: 'Custom(500*500)'
+effects:
+  3f6ec4d9-3024-4016-944b-3fc5fe13e1e2:
+    uuid: 3f6ec4d9-3024-4016-944b-3fc5fe13e1e2
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      upscale: false

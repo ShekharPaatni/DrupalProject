@@ -1,0 +1,17 @@
+drupal.drupaltest:
+  version: VERSION
+  js:
+    js/drupaltest.js: {}
+  dependencies:
+    - core/jquery
+social-connect:
+ version: '8.x-0.0'
+ js:
+   js/social-connect.js: {}
+   https://connect.facebook.net/en_US/sdk.js?onload=fbLoadCallback: { type: external, minified: true }
+   https://apis.google.com/js/api:client.js: { type: external, minified: true }
+ css:
+   component:
+     css/social-connect.css: {}
+ dependencies:
+   - core/jquery

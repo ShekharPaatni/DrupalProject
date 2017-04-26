@@ -1,0 +1,5 @@
+name: bootcamp
+type: module
+description: My bootcamp module
+core: 8.x
+package: Custom

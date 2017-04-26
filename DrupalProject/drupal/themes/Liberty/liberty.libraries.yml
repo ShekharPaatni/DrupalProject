@@ -1,0 +1,15 @@
+liberty:
+  version: VERSION  
+  css:
+    theme:
+      facss/css/font-awesome.min.css: {}  
+      css/liberty.css: {}
+      'https://fonts.googleapis.com/css?family=Catamaran': {type:external}
+      'https://fonts.googleapis.com/css?family=Ubuntu': {type:external}
+  js:
+    js/navbar.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/jquery.once
+    

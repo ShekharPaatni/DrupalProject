@@ -1,0 +1,7 @@
+manishtask.content:
+  path: '/bootcamp'
+  defaults: 
+    _controller: '\Drupal\manishtask\Controller\ControlContent::content'
+    _title: 'Hello'
+  requirements: 
+    _permission: 'chandra'

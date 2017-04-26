@@ -1,0 +1,18 @@
+<?php	
+$databasename=new PDO("mysql:host=localhost;dbname=php;","root","root") or die("unable to connect with database");
+$fp=fopen("excel.csv","r") or die("File not found");
+$query=$databasename->prepare("INSERT INTO csvtable(item,name,salary,mobile,email_id) values(:item,:name,:salary,:mobile,:email)");
+while(!feof($fp)){
+$temp=fgetcsv($fp);
+
+$query->bindParam(':item',$temp[0]);
+$query->bindParam(':name',$temp[1]);
+$query->bindParam(':salary',$temp[2]);
+$query->bindParam(':mobile',$temp[3]);
+$query->bindParam(':email',$temp[4]);
+$query->execute();
+echo "New records created successfully";	
+}
+
+
+?>

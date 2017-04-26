@@ -1,0 +1,67 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+function drupaltest_form_alter(&$form, &$form_state, $form_id){
+
+    if($form_id=='system_site_information_settings'){
+        //        
+        $form['Name']=array(
+            '#prefix'=>'<div style="display:block;border:2px solid black;">',
+            '#type'=>'textfield',
+            '#title'=>t('UserName'),
+            '#size'=>60,
+            '#suffix' =>'</div>',
+            '#attributes'=> array(
+                'placeholder' => t('UserName')
+            ),
+            '#default_value'=>\Drupal::config('system.site')->get('Name'),
+
+            '#required'=>true
+        );
+       $form['#attached']['library'][] = 'drupaltest/drupal.drupaltest'; 
+       $form['#validate'][]='drupaltest_validate';
+       $form['#submit'][]='drupaltest_form_submit';
+    }
+    
+}
+function drupaltest_validate($form,&$form_state){
+    $data=$form_state->getValue('Name');
+    if(!preg_match_all("/^[a-zA-z]+$/", $data)){
+            drupal_set_message("Name must be alphabet you enter: ".$data);
+            //form_set_error("Name", t('Enter Alphabet only'));
+            
+    $form_state->setValue('Name',\Drupal::config('system.site')->get('Name'));
+            }
+}
+function drupaltest_form_submit($form,&$form_state){
+     \Drupal::configFactory()->getEditable('system.site')
+    ->set('Name', $form_state->getValue('Name'))
+    ->save();
+    
+}
+
+function drupaltest_page_attachments(array &$page) {
+   
+ $page['#attached']['library'][] = 'drupaltest/drupal.drupaltest';
+
+ $page['#attached']['drupalSettings']['drupaltest'] = [
+     'name' => t('Chandra_Shekhar_Paatni'),
+     'interest' => t('Horse_Riding'),
+   ];
+}   
+
+function drupaltest_block_view_alter(&$data,$block){
+        
+           if('views_block:testing-block_1'== $data['#configuration']['id']) 
+           {
+               $data['#attached']['library'][] = 'drupaltest/drupal.drupaltest';
+           }
+               
+}
+
+

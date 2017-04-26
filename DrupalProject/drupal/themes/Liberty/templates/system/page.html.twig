@@ -1,0 +1,97 @@
+<div class="head-top">
+{% if page.header_top %}
+<div class="header-top">
+ {{ page.header_top }}
+</div>
+{% endif %}
+{% if page.header_medium %}
+<div class="header-medium">
+    {{ page.header_medium }}
+</div>
+{% endif %}
+</div>
+{# Main Div which make the content in middle #}
+
+<div class="main-content">
+        <div >
+            {% if page.header_bottom %}
+                <div class="header-bottom">
+                {{ page.header_bottom }}
+                </div>
+            {% endif %}
+</div> 
+        {% if page.main_nav %}
+        <div class="mainnav">
+            {{ page.main_nav }}
+        </div>
+        {% endif %}
+           
+{% if page.content %}
+    <div class="contentinfo">
+        {{ page.content }}
+    </div>
+{% endif %}
+{% if page.content_top %}
+    <div>
+        {{ page.content_top }}
+    </div>
+{% endif %}
+{# Page Division in column #}
+<div class="main-section">
+    <div class="content-section">
+{% if page.content_left %}
+    <div class="content-left">
+        {{ page.content_left }}
+    </div>
+{% endif %}
+{% if page.content_middle %}
+    <div class="content-middle">
+        {{ page.content_middle }}
+    </div>
+{% endif %}
+{% if page.content_bottom %}
+    <div class="content-bottom">
+        {{ page.content_bottom }}
+    </div>
+{% endif %}
+    </div>
+<div class="right-sidebar">
+{% if page.sidebar %}
+    <div>
+        {{ page.sidebar }}
+    </div>
+{% endif %}
+</div>
+
+</div>
+
+{% if page.footer_menu_bar %}
+    <div class="footer-menu-bar">
+        {{ page.footer_menu_bar }}
+    </div>
+{% endif %}
+</div>
+<div class="footer">
+  <div class="footer-info">
+{% if page.footer_left %}
+    <div class="footer-left">
+        {{ page.footer_left }}
+    </div>
+{% endif %}
+{% if page.footer_center %}
+    <div class="footer-center">
+        {{ page.footer_center }}
+    </div>
+ {% endif %}
+ {% if page.footer_right %}
+     <div class="footer-right">
+         {{ page.footer_right }}
+     </div>
+ {% endif %}
+  </div>
+ {% if page.footer_bottom %}
+     <div class="footer-bottom">
+         {{ page.footer_bottom }}
+     </div>
+ {% endif %}
+</div>

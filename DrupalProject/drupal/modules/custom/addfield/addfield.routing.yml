@@ -1,0 +1,7 @@
+fieldadd.form:
+  path: '/buttonadd'
+  defaults:
+    _form: '\Drupal\addfield\Form\AddTextField'
+    _title: 'Add Text Field'
+  requirements:
+    _permission: 'access content'

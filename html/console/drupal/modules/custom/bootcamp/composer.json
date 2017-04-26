@@ -1,0 +1,14 @@
+{
+  "name": "drupal/bootcamp",
+  "type": "drupal-module",
+  "description": "My bootcamp module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/bootcamp",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/bootcamp",
+    "source": "http://cgit.drupalcode.org/bootcamp"
+  },
+  "require": { }
+}

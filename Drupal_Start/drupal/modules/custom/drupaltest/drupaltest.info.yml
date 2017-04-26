@@ -1,0 +1,4 @@
+name: drupaltest
+package: custom
+core: 8.x
+type: module

@@ -1,0 +1,6 @@
+name: Ajax2
+description: This is the testing of ajax call
+package: custom
+
+type: module
+core: 8.x

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Showing contact List</title>
+    </head>
+    <body>
+        <table border="2px solid black ">
+            <tr>
+                <td>Sno</td>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>phone</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>City</td>
+            </tr>
+            
+            
+            {% for row in data %}
+            <tr>
+                <td>{{  row.id }} </td>
+                <td>{{ row.username }} </td>
+                <td>{{ row.gender }}</td>
+                <td>{{ row.phone }}</td>
+                <td>{{ row.email }}</td>
+                <td>{{ row.address }}</td>
+                <td>{{ row.city }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+    
+</html>

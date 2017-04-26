@@ -1,0 +1,6 @@
+name: Queue
+description: This is the testing module of the queue.
+package: custom
+
+core: 8.x
+type: module

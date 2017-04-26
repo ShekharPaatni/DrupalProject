@@ -1,0 +1,7 @@
+bootcamp.bootcamp_form:
+  title: 'Bootcamp Config'
+  route_name: bootcamp.bootcamp_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+

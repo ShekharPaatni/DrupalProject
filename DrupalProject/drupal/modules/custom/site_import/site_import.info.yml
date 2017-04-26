@@ -1,0 +1,10 @@
+name: Site Import
+description: Import nodes, users, terms and more from old database to drupal entity.
+package: custom
+
+core: 8.x
+type: module
+dependencies:
+ - drupal:migrate
+ - migrate_plus:migrate_plus
+ - migrate_tools:migrate_tools
